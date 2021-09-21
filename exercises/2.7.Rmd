@@ -1,0 +1,23 @@
+---
+output: html_document
+---
+
+## Exercise 2.7
+
+__Suppose we wish to use this data set to make a prediction for Y when X1 = X2 = X3 = 0 using K-nearest neighbors.__
+
+a. __Compute the Euclidean distance between each observation and the test point, X1 = X2 = X3 = 0.__
+
+<!-- enter your solution here -->
+
+b. __What is our prediction with $K = 1$? Why?__
+
+<!-- enter your solution here -->
+    
+c. __What is our prediction with $K = 3$? Why?__
+
+<!-- enter your solution here -->
+    
+d. __If the Bayes decision boundary in this problem is highly nonlinear, then would we expect the best value for $K$ to be large or small? Why?__
+
+<!-- enter your solution here -->

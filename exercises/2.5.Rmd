@@ -1,0 +1,9 @@
+---
+output: html_document
+---
+
+## Exercise 2.5
+
+__What are the advantages and disadvantages of a very flexible (versus a less flexible) approach for regression or classification? Under what circumstances might a more flexible approach be preferred to a less flexible approach? When might a less flexible approach be preferred?__
+
+<!-- enter your solution here -->

@@ -1,0 +1,35 @@
+---
+output: html_document
+---
+
+## Exercise 4.11
+
+__In this problem, you will develop a model to predict whether a given car gets high or low gas mileage based on the "Auto" data set.__
+
+a. __Create a binary variable, "mpg01", that contains a 1 if "mpg" contains a value above its median, and a 0 if "mpg" contains a value below its median. You can compute the median using the `median()` function. Note you may find it helpful to use the `data.frame()` function to create a single data set containing both "mpg01" and the other "Auto" variables.__
+
+<!-- enter your solution here -->
+
+b. __Explore the data graphically in order to investigate the association between "mpg01" and the other features. Which of the other features seem most likely to be useful in predicting "mpg01" ? Scatterplots and boxplots may be useful tools to answer this question. Describe your findings.__
+
+<!-- enter your solution here -->
+
+c. __Split the data into a training set and a test set.__
+
+<!-- enter your solution here -->
+
+d. __Perform LDA on the training data in order to predict "mpg01" using the variables that seemed most associated with "mpg01" in (b). What is the test error of the model obtained?__
+
+<!-- enter your solution here -->
+
+e. __Perform QDA on the training data in order to predict "mpg01" using the variables that seemed most associated with "mpg01" in (b). What is the test error of the model obtained ?__
+
+<!-- enter your solution here -->
+
+f. __Perform logistic regression on the training data in order to predict "mpg01" using the variables that seemed most associated with "mpg01" in (b). What is the test error of the model obtained?__
+
+<!-- enter your solution here -->
+
+g. __Perform KNN on the training data, with several values of K, in order to predict "mpg01" using the variables that seemed most associated with "mpg01" in (b). What test errors do you obtain ? Which value of K seems to perform the best on this data set?__
+
+<!-- enter your solution here -->

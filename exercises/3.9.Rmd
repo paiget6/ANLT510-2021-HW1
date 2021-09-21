@@ -1,0 +1,41 @@
+---
+output: html_document
+---
+
+## Exercise 3.9
+
+__This question involves the use of multiple linear regression on the Auto data set.__
+
+a. __Produce a scatterplot matrix which includes all of the variables in the data set.__
+
+<!-- enter your solution here -->
+
+b. __Compute the matrix of correlations between the variables using the function `cor()`. You will need to exclude the name variable which is qualitative.__
+
+<!-- enter your solution here -->
+
+c. __Use the `lm()` function to perform a multiple linear regression with mpg as the response and all other variables except name as the predictors. Use the `summary()` function to print the results. Comment on the output. For instance:__
+
+i. __Is there a relationship between the predictors and the response?__
+
+<!-- enter your solution here -->
+
+ii. __Which predictors appear to have a statiscally significant relationship to the response?__
+
+<!-- enter your solution here -->
+
+iii. __What does the coefficient for the year variable suggest?__
+
+<!-- enter your solution here -->
+
+d. __Use the `plot()` function to produce diagnostic plots of the linear regression fit. Comment on any problems you see with the fit. Do the residual plot suggest any unusually large outliers? Does the leverage plot identify any observations with unusually high leverage?__
+
+<!-- enter your solution here -->
+
+e. __Use the `*` and `:` symbols to fit linear regression models with interaction effects. Do any interaction effects. Do any interactions appear to be statistically significant?__
+
+<!-- enter your solution here -->
+
+f. __Try a few different transformations of the variables, such as $\log(X)$, $\sqrt(X)$, $X^2$. Comment on your findings.__
+
+<!-- enter your solution here -->

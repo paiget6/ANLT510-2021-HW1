@@ -1,0 +1,31 @@
+---
+output: html_document
+---
+
+## Exercise 3.11
+
+__In this problem we will investigate the t-statistic for the null hypothesis $H_{0}:\beta=0$ in simple linear regression without an intercept. To begin, we generate a predictor $x$ and a response $y$ as follows.__
+
+a. __Perform a simple linear regression of $y$ onto $x$, without an intercept. Report the coefficient estimate β^, the standard error of this coefficient estimate, and the t-statistic and p-value associated with the null hypothesis H0:β=0. Comment on these results. (You can perform regression without an intercept using the command `lm(y~x+0)`.)__
+
+<!-- enter your solution here -->
+
+b. __Now perform a simple linear regression of $x$ onto $y$ without an intercept, and report the coefficient estimate, its standard error, and the corresponding t-statistic and p-values associated with the null hypothesis $H_{0}:\beta=0$. Comment on these results.__
+
+<!-- enter your solution here -->
+
+c. __What is the relationship between the results obtained in (a) and (b)?__
+
+<!-- enter your solution here -->
+
+d. __Show algebraically, and confirm numerically in R, that the t-statistic can be written as__
+
+<!-- enter your solution here -->
+
+e. __Using the results from (d), argue that the t-statistic for the regression of $y$ onto $x$ is the same as the t-statistic for the regression of $x$ onto $y$.__
+
+<!-- enter your solution here -->
+
+f. __In R, show that when regression is performed with an intercept, the t-statistic for $H_{0}: \beta=0$ is the same for the regression of $y$ onto $x$ as it is for the regression of $x$ onto $y$.__
+
+<!-- enter your solution here -->

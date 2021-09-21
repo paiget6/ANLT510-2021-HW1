@@ -1,0 +1,15 @@
+---
+output: html_document
+---
+
+## Exercise 4.9
+
+__This problem has to do with odds.__
+
+a. __On average, what fraction of people with an odds of 0.37 of defaulting on their credit card payment will in fact default?__
+
+<!-- enter your solution here -->
+    
+b. __Suppose that an individual has a 16% chance of defaulting on her credit card payment. What are the odds that she will default?__
+
+<!-- enter your solution here -->

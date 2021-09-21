@@ -1,0 +1,35 @@
+---
+output: html_document
+---
+
+## Exercise 3.8
+
+__This question involves the use of simple linear regression on the `Auto` data set.__
+
+a. __Use the `lm()` function to perform a simple linear regression with mpg as the response and horsepower as the predictor. Use the `summary()` function to print the results. Comment on the output. For example:__
+
+<!-- enter your solution here -->
+
+i. __Is there a relationship between the predictor and the response?__
+
+<!-- enter your solution here -->
+
+ii. __How strong is the relationship between the predictor and the response?__
+
+<!-- enter your solution here -->
+
+iii. __Is the relationship between the predictor and the response positive or negative?__
+
+<!-- enter your solution here -->
+    
+iv. __What is the predicted mpg associated with a horsepower of 98? What are the associated 95 % confidence and prediction intervals?__
+
+<!-- enter your solution here -->
+
+b. __Plot the response and the predictor. Use the abline() function to display the least squares regression line.__
+
+<!-- enter your solution here -->
+
+c. __Use the `plot()` function to produce diagnostic plots of the least squares regression fit. Comment on any problems you see with the fit.__
+
+<!-- enter your solution here -->

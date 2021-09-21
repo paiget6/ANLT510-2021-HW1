@@ -1,0 +1,19 @@
+---
+output: html_document
+---
+
+## Exercise 3.12
+
+__This problem involves simple linear regression without an intercept.__
+
+a. __Recall that the coefficient estimate $\beta^{0}$ for the linear regression of Y onto X without an intercept is given by (3.38). Under what circumstance is the coefficient estimate for the regression of $X$ onto $Y$ the same as the coefficient estimate for the regression of $Y$ onto $X$?__
+
+<!-- enter your solution here -->
+
+b. __Generate an example in R with $n=100$ observations in which the coefficient estimate for the regression of $X$ onto $Y$ is different from the coefficient estimate for the regression of $Y$ onto $X$.__
+
+<!-- enter your solution here -->
+
+c. __Generate an example in R with $n=100$ observations in which the coefficient estimate for the regression of $X$ onto $Y$ is the same as the coefficient estimate for the regression of $Y$ onto $X$.__
+
+<!-- enter your solution here -->
