@@ -11,7 +11,11 @@ output:
 ---
 
 ```{r setup,echo=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+# Note that error = TRUE will not stop execution b/c of errors
+# Once you've completed this assignment change this to error = FALSE
+# to ensure that your work is complete and error free
+knitr::opts_chunk$set(echo = TRUE, 
+                      error = TRUE)
 
 ```
 
