@@ -31,18 +31,22 @@ pairs(Auto)
 Based on this plot, we create the following four boxplots that show the relationship between these variables and mpg01
 
 ```{r}
-## create boxplots
+## Replace this comment with the code to generate the boxplots
 ```
 
 Finally, we create a subset data frame that contains the target variable and these these four predictor variable
 
 ```{r}
+# Insert the column names corresponding to the predictors that showed
+# the strongest relationship with `mpg01` in the boxplots above  
 Y = c("mpg01")
-X = c("cylinders", "displacement", "horsepower", "weight")
+X = c("________", "________", "________", "________")
 .Auto = Auto[,c(Y,X)]
 ```
 
 c. __Split the data into a training set and a test set.__
+
+In the chunk below we generate this partition/split using the `rsample` package
 
 ```{r}
 samp = rsample::initial_split(.Auto, prop = 0.7)
@@ -65,7 +69,7 @@ table(pred.lda$class, Auto_test$mpg01)
 te_lda = mean(pred.lda$class != Auto_test$mpg01)
 ```
 
-Then the test error is `r te_lda`
+Then the test error using linear discriminant analysis is `r te_lda`
 
 e. __Perform QDA on the training data in order to predict "mpg01" using the variables that seemed most associated with "mpg01" in (b). What is the test error of the model obtained ?__
 
@@ -78,6 +82,8 @@ table(pred.qda$class, Auto_test$mpg01)
 ## Compute the test error
 te_qda = mean(pred.qda1$class != Auto_test$mpg01)
 ```
+
+Then the test error using quadratic discriminant analysis is `r te_qda`
 
 f. __Perform logistic regression on the training data in order to predict "mpg01" using the variables that seemed most associated with "mpg01" in (b). What is the test error of the model obtained?__
 
@@ -96,8 +102,10 @@ pred.glm <- rep(0, length(probs))
 pred.glm[probs > 0.5] <- 1
 table(pred.glm, Auto_test$mpg01)
 
-mean(pred.glm != Auto_test$mpg01)
+te_glm = mean(pred.glm != Auto_test$mpg01)
 ```
+
+The test error using logistic regression is `r te_glm`
 
 g. __Perform KNN on the training data, with several values of K, in order to predict "mpg01" using the variables that seemed most associated with "mpg01" in (b). What test errors do you obtain ? Which value of K seems to perform the best on this data set?__
 
@@ -117,6 +125,8 @@ table(pred.knn, Auto_test$mpg01)
 te_knn1 = mean(pred.knn != Auto_test$mpg01)
 ```
 
+The test error using $k$-nearest neighbor classification with $k=1$ is `r te_knn1`
+
 ```{r}
 pred.knn <- knn(train.X, 
                 test.X, 
@@ -128,6 +138,8 @@ table(pred.knn, Auto_test$mpg01)
 te_knn10 = mean(pred.knn != Auto_test$mpg01)
 ```
 
+The test error using $k$-nearest neighbor classification with $k=10$ is `r te_knn10`
+
 ```{r}
 pred.knn <- knn(train.X, 
                 test.X, 
@@ -138,3 +150,5 @@ table(pred.knn, Auto_test$mpg01)
 
 te_knn100 = mean(pred.knn != Auto_test$mpg01)
 ```
+
+The test error using $k$-nearest neighbor classification with $k=100$ is `r te_knn100`
