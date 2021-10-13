@@ -50,7 +50,7 @@ The `Elite` column is created as shown below
 
 ```{r}
 Elite <- rep("No", nrow(college))
-Elite[college$Top10perc > 50] <- "Yes"
+Elite[___________] <- "Yes"
 Elite <- as.factor(Elite)
 college$Elite <- Elite
 summary(college$Elite)
@@ -59,7 +59,7 @@ summary(college$Elite)
 The requested boxplot is generated as shown below
 
 ```{r}
-
+## Replace this comment with your code to generate the boxplot 
 ```
 
 __Use the `hist()` function to produce some histograms with numbers of bins for a few of the quantitative variables.__
@@ -69,28 +69,28 @@ In the code chunk below we generate histograms for four of the variables in this
 ```{r}
 par(mfrow = c(2,2), las = 1)
 
-hist(, 
+hist(_________, 
      col = 2, 
      xlab = "Books", 
      ylab = "Count",
      border = "white",
      main = "")
 
-hist(, 
+hist(_________, 
      col = 3, 
      xlab = "PhD", 
      ylab = "Count",
      border = "white",
      main = "")
 
-hist(, 
+hist(_________, 
      col = 4, 
      xlab = "Grad Rate", 
      ylab = "Count",
      border = "white",
      main = "")
 
-hist(, 
+hist(_________, 
      col = 6, 
      xlab = "% alumni", 
      ylab = "Count",
