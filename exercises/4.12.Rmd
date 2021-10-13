@@ -22,7 +22,7 @@ d. __Now create a new function, `Power3()`, that actually returns the result "$x
 
 <!-- enter your solution here -->
 
-e. __Now using the `Power3()` function, create a plot of $f(x)=x \cdot 3$. The x-axis should display a range of integers from 1 to 10, and the y-axis should display x2. Label the axes appropriately, and use an appropriate title for the figure. Consider displaying either the x-axis, the y-axis, or both on the log-scale.__
+e. __Now using the `Power3()` function, create a plot of $f(x)=x \cdot 3$. The x-axis should display a range of integers from 1 to 10, and the y-axis should display $x^2$. Label the axes appropriately, and use an appropriate title for the figure. Consider displaying either the x-axis, the y-axis, or both on the log-scale.__
 
 <!-- enter your solution here -->
 
