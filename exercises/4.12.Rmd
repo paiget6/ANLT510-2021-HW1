@@ -6,7 +6,7 @@ output: html_document
 
 __This problem involves writing functions.__
 
-a. __Write a function, `Power()`, that prints out the result of raising 2 to the 3rd power. In other words, your function should compute 23 and print out the results.__
+a. __Write a function, `Power()`, that prints out the result of raising 2 to the 3rd power. In other words, your function should compute $2^3$ and print out the results.__
 
 <!-- enter your solution here -->
 
@@ -18,7 +18,7 @@ c. __Using the `Power2()` function that you just wrote, compute $10^3$, $81^7$, 
 
 <!-- enter your solution here -->
 
-d. __Now create a new function, `Power3()`, that actually returns the result "$x^a$" as an R object, rather than simply printing it to the screen. That is, if you store the value "$x^a$" in an object called "result" within your function, then you can simply return() this result.__
+d. __Now create a new function, `Power3()`, that actually returns the result "$x^a$" as an R object, rather than simply printing it to the screen. That is, if you store the value "$x^a$" in an object called "result" within your function, then you can simply `return()` this result.__
 
 <!-- enter your solution here -->
 
