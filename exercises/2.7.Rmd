@@ -39,7 +39,7 @@ In three dimensions (or 3-space) $n = 3$ and the Euclidean distance is calculate
   }
   
   # Calculate the distance between point1 and point2
-  euclidean_distance = #???
+  euclidean_distance = ____________
     
   return(euclidean_distance)
   
