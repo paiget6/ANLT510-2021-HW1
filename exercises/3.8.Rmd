@@ -8,7 +8,16 @@ __This question involves the use of simple linear regression on the `Auto` data 
 
 a. __Use the `lm()` function to perform a simple linear regression with mpg as the response and horsepower as the predictor. Use the `summary()` function to print the results. Comment on the output. For example:__
 
-<!-- enter your solution here -->
+```{r}
+library(ISLR)
+data(Auto)
+
+lm.fit <- lm(___ ~ ___, 
+             data = Auto)
+
+knitr::kable(broom::tidy(summary(lm.fit)))
+```
+
 
 i. __Is there a relationship between the predictor and the response?__
 
@@ -24,12 +33,35 @@ iii. __Is the relationship between the predictor and the response positive or ne
     
 iv. __What is the predicted mpg associated with a horsepower of 98? What are the associated 95 % confidence and prediction intervals?__
 
-<!-- enter your solution here -->
+```{r}
+.new_data = _______________
 
-b. __Plot the response and the predictor. Use the abline() function to display the least squares regression line.__
+predict(lm.fit, 
+        newdata = .new_data, 
+        interval = "confidence")
 
-<!-- enter your solution here -->
+predict(lm.fit, 
+        newdata = .new_data, 
+        interval = "prediction")
+```
+
+b. __Plot the response and the predictor. Use the `abline()` function to display the least squares regression line.__
+
+```{r}
+plot(x = ___________, 
+     y = ___________,
+     pch = 16,
+     col = scales::alpha("black", alpha = 0.25))
+
+abline(lm.fit, 
+       lwd = 3, 
+       col = 2)
+```
 
 c. __Use the `plot()` function to produce diagnostic plots of the least squares regression fit. Comment on any problems you see with the fit.__
 
-<!-- enter your solution here -->
+```{r}
+par(mfrow = c(2,2))
+
+plot(lm.fit)
+```
