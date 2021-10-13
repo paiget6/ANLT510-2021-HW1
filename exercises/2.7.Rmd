@@ -8,16 +8,104 @@ __Suppose we wish to use this data set to make a prediction for Y when X1 = X2 =
 
 a. __Compute the Euclidean distance between each observation and the test point, X1 = X2 = X3 = 0.__
 
-<!-- enter your solution here -->
+>The Euclidean distance between points $p$ and $q$ with arbitrary number of dimensions is calulated as
+
+$$
+{\displaystyle d(\mathbf {p} ,\mathbf {q} )={\sqrt {(p_{1}-q_{1})^{2}+(p_{2}-q_{2})^{2}+\cdots +(p_{i}-q_{i})^{2}+\cdots +(p_{n}-q_{n})^{2}}}={\sqrt {\sum _{i=1}^{n}{(p_{i}-q_{i})^{2}}}}}.
+$$
+
+In three dimensions (or 3-space) $n = 3$ and the Euclidean distance is calculated from the respective $x$, $y$, and $z$ components of each points.  In R, these distances can be calculated using the function below
+
+```{r}
+### Define a function that takes two 
+### n-dimensional points as arguments
+### and calculates the euclidean distance 
+### between these points
+
+.dist <- function(point1, point2){
+  
+  # point1 and point2 should be vectors of n dimension
+  # check to see that both are numeric vectors
+  if(!all(is.vector(c(point1, point2), mode = "numeric"))){
+    
+     stop("Both point1 and point2 must be numeric vectors")
+    
+  }
+  # check to see that both points have the same number of dimensions
+  if(length(point1) != length(point2)){
+    
+    stop("point1 and point2 must have the same length")
+    
+  }
+  
+  # Calculate the distance between point1 and point2
+  euclidean_distance = #???
+    
+  return(euclidean_distance)
+  
+}
+```
+
+We can then use the function `.dist()` to compute the distances between the points as shown below
+
+```{r}
+obs0 <- c( 0, 0, 0)
+obs1 <- c( 0, 3, 0)
+obs2 <- c( 2, 0, 0)
+obs3 <- c( 0, 1, 3)
+obs4 <- c( 0, 1, 2)
+obs5 <- c(-1, 0, 1)
+obs6 <- c( 1, 1, 1)
+
+df <- rbind(obs0,obs1,obs2,obs3,obs4,obs5,obs6)
+
+dist <- c(.dist(obs0,obs0), # Compute distance from obs0 to obs0
+          .dist(obs1,obs0), # Compute distance from obs0 to obs1
+          .dist(obs2,obs0), # Compute distance from obs0 to obs2
+          .dist(obs3,obs0), # Compute distance from obs0 to obs3
+          .dist(obs4,obs0), # Compute distance from obs0 to obs4
+          .dist(obs5,obs0), # Compute distance from obs0 to obs5
+          .dist(obs6,obs0)) # Compute distance from obs0 to obs6
+```
+
+Then, we merge the computed distances with the original data frame `df` and output it as a table using `knitr::kable()`
+
+```{r}
+
+
+df <- data.frame(df,
+                 Y = c("Black","Red","Red","Red","Green","Green","Red"),
+                 Distance = dist)
+
+colnames(df) <- c("$X_1$","$X_2$","$X_3$","$Y$","$D_{(0,0,0)}$")
+
+knitr::kable(df)
+```
+
+Lastly, we can visualize these points in 3-space in a plotly graphic using the code below
+
+```{r}
+library(plotly)
+
+fig <- plot_ly(df, 
+               x = ~`$X_1$`,
+               y = ~`$X_2$`, 
+               z = ~`$X_3$`, 
+               color = ~`$Y$`, 
+               colors = c("black",'green', 'red'))
+
+fig <- fig %>% add_markers()
+fig <- fig %>% layout(scene = list(xaxis = list(title = 'X1', range = c(-5,5)),
+                                   yaxis = list(title = 'X2', range = c(-5,5)),
+                                   zaxis = list(title = 'X3', range = c(-5,5))))
+
+fig
+```
 
 b. __What is our prediction with $K = 1$? Why?__
 
-<!-- enter your solution here -->
+For this exercise we are only concerned with the first nearest neighbor to point `obs0`.  Since the nearest neighbor is `????` we predict that these points share the same property - thus our prediction for `obs0` in this case is ?.
     
 c. __What is our prediction with $K = 3$? Why?__
 
-<!-- enter your solution here -->
-    
-d. __If the Bayes decision boundary in this problem is highly nonlinear, then would we expect the best value for $K$ to be large or small? Why?__
-
-<!-- enter your solution here -->
+For this exercise we are concerned with the three nearest neighbors to point `obs0`.  Since the nearest neighbors are `????`, `????`, and `????` we predict that the `obs0` shares the same property as the majority class - thus our prediction for `obs0` in this case is ?.
